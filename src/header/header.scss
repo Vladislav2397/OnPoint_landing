@@ -1,0 +1,35 @@
+@import "../variables.scss";
+
+.header {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    &__wrapper {
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1140px;
+        margin: 0 auto;
+    }
+
+    &__logo {
+        width: 100px;
+        height: 50px;
+        background-color: #ccc;
+    }
+
+    &__nav {
+        padding: 10px;
+        gap: 30px;
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $textBase;
+    }
+}

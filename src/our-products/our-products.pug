@@ -1,0 +1,51 @@
+-
+    const products = [
+        {
+            image: {
+                src: '',
+                alt: '',
+            },
+            title: 'Dispatch Board',
+            description: 'Dispatch Board will streamline day-to-day operations maximizing your time so you can focus on better loads and bigger profit.',
+        },
+        {
+            image: {
+                src: '',
+                alt: '',
+            },
+            title: 'Asset Tracker',
+            description: 'TT ELD Asset Tracker is the most effective to secure your asset through bottom line. It is for who care about the safety of their drivers and trucks.',
+        },
+        {
+            image: {
+                src: '',
+                alt: '',
+            },
+            title: 'ELD Compliance Solution',
+            description: 'Our FMCSA-certified ELD compliance solution provides users with a wide variety of comprehensive features.',
+        },
+        {
+            image: {
+                src: '',
+                alt: '',
+            },
+            title: 'Dash Camera System',
+            description: 'According to FMCSA research that accident rose over $1,2 million; with TT ELD camera business will secure both its finance and fleet.',
+        },
+    ]
+include ../common/section-header.pug
+
+section.our-products
+    .container.our-products__wrapper
+        +sectionHeader("Our products", "Working hard for something we don’t care about is called stressed, working hard for something we love is called passion.")
+        .our-products__divider
+        ul.our-products__list
+            each section in products
+                li.our-products__item
+                    .our-products__image
+                        img(
+                            src= section.image.src
+                            alt= section.image.alt
+                        )
+                    h5.our-products__title= section.title
+                    p.our-products__description= section.description

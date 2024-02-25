@@ -1,0 +1,38 @@
+-
+    const navLinks = [
+        {
+            text: 'Home',
+            link: '#'
+        },
+        {
+            text: 'Products',
+            link: '#'
+        },
+        {
+            text: 'Features',
+            link: '#'
+        },
+        {
+            text: 'Pricing',
+            link: '#'
+        },
+        {
+            text: 'Request Demo',
+            link: '#'
+        },
+        {
+            text: 'Store',
+            link: '#'
+        },
+    ]
+
+header.header
+    .header__wrapper.container
+        .header__logo
+            img(
+                src=""
+                alt=""
+            )
+        nav.header__nav
+            each link in navLinks
+                a.header__link(href=link.link)= link.text

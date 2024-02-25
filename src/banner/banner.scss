@@ -1,0 +1,30 @@
+@import "../variables.scss";
+
+.banner {
+    position: relative;
+    min-height: 980px;
+    background-color: #cccccc;
+
+    &__content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(0, -50%);
+    }
+
+    &__title {
+        font-size: 96px;
+        line-height: 105px;
+        margin-bottom: 12px;
+        font-weight: bold;
+        color: $primary;
+    }
+
+    &__description {
+        font-size: 22px;
+        line-height: 28px;
+        margin-bottom: 40px;
+        font-weight: bold;
+        color: $primary;
+    }
+}

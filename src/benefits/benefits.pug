@@ -1,0 +1,63 @@
+-
+    let benefits = [
+        {
+            image: {
+                src: '',
+                alt: '',
+            },
+            title: 'Driver App on any sceen',
+            description: 'Right measurement of the fleet help you set up precise business. Our "Driver App" provides a most\n' +
+                    'comprehensive solutions to the market.',
+        },
+        {
+            image: {
+                src: '',
+                alt: '',
+            },
+            title: 'Flexible Dispatch Board',
+            description: 'Dispatch Board is the go-to dispatching software - created with carrier needs in mind. Dispatch Board will streamline day-to-day operations maximizing your time so you can focus on better loads and bigger profit.',
+        },
+        {
+            image: {
+                src: '',
+                alt: '',
+            },
+            title: 'Chat on drivers and dispatchers',
+            description: 'We understand the importance of approaching each work integrally and believe in the power of simple and easy communication.',
+        },
+        {
+            image: {
+                src: '',
+                alt: '',
+            },
+            title: 'GPS Tracking',
+            description: 'Keep up with demand - dispatch and track your fleet with real-time GPS, leveraging weather and traffic data to exceed your customers\' expectations.',
+        },
+    ]
+
+mixin benefitContent(image, title, description)
+    .benefit-content
+        .benefit-content__image
+            img(
+                src=image.src
+                alt=image.alt
+            )
+        .benefit-content__divider
+        .benefit-content__title= title
+        .benefit-content__description= description
+
+section.benefits
+    .benefits__item.benefits__item--first
+        .image
+        +benefitContent(benefits[0].image, benefits[0].title, benefits[0].description)
+    .benefits__item.benefits__item--second
+        .image
+            .background
+        +benefitContent(benefits[1].image, benefits[1].title, benefits[1].description)
+    .benefits__item.benefits__item--third
+        .image
+        .image-chat
+        +benefitContent(benefits[2].image, benefits[2].title, benefits[2].description)
+    .benefits__item.benefits__item--four
+        .image
+        +benefitContent(benefits[3].image, benefits[3].title, benefits[3].description)

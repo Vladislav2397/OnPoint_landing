@@ -1,0 +1,31 @@
+include ../common/section-header
+include ../common/form-cell
+
+section.form
+    .form__wrapper.container
+        +sectionHeader("Request Demo", "Any questions? We're here to help. Fill out the form and we will be in touch.")
+        .form__divider
+        form.form__form
+            input.form__input(
+                placeholder="Your name*"
+            )
+            input.form__input(
+                placeholder="Your Email*"
+            )
+            input.form__input(
+                placeholder="Company name*"
+            )
+            input.form__input(
+                placeholder="Amount of trucks*"
+            )
+            input.form__input(
+                placeholder="Phone*"
+            )
+            textarea.form__textarea(
+                placeholder="Type your massage here..."
+            )
+            .form__call-section
+                +form-cell("Call Us", "+7999999999").form__cell
+                +form-cell("Email Us", "example@inbox.ru").form__cell
+                +form-cell("Visit office", "Address").form__cell
+                +button().form__button Send message
