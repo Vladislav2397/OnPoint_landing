@@ -9,18 +9,21 @@ const sass = gulpSass(dartSass)
 const watchPaths = {
     src: {
         pug: 'src/**/*.pug',
-        sass: 'src/**/*.s[ac]ss'
+        sass: 'src/**/*.s[ac]ss',
+        assets: 'assets/**/*',
     },
 }
 
 const paths = {
     src: {
         pug: 'src/*.pug',
-        sass: 'src/*.s[ac]ss'
+        sass: 'src/*.s[ac]ss',
+        assets: 'src/assets/**/*'
     },
     dest: {
         html: 'dist/',
-        css: 'dist/'
+        css: 'dist/',
+        assets: 'dist/assets',
     }
 };
 
@@ -38,6 +41,12 @@ function convertSass() {
         .pipe(browserSync.stream());
 }
 
+function copyAssets() {
+    return gulp.src(paths.src.assets)
+        .pipe(gulp.dest(paths.dest.assets))
+        .pipe(browserSync.stream());
+}
+
 function watchFiles() {
     browserSync.init({
         server: {
@@ -50,7 +59,7 @@ function watchFiles() {
     gulp.watch('dist/*.html').on('change', browserSync.reload);
 }
 
-const build = gulp.parallel(convertPug, convertSass);
+export const build = gulp.parallel(convertPug, convertSass, copyAssets);
 
 export { convertPug, convertSass, watchFiles };
 export default watchFiles;
