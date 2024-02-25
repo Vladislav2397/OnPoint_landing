@@ -2,7 +2,7 @@
     let benefits = [
         {
             image: {
-                src: '',
+                src: '/assets/icons/mobile.svg',
                 alt: '',
             },
             title: 'Driver App on any sceen',
@@ -11,7 +11,7 @@
         },
         {
             image: {
-                src: '',
+                src: '/assets/icons/monitor.svg',
                 alt: '',
             },
             title: 'Flexible Dispatch Board',
@@ -19,7 +19,7 @@
         },
         {
             image: {
-                src: '',
+                src: '/assets/icons/mobile.svg',
                 alt: '',
             },
             title: 'Chat on drivers and dispatchers',
@@ -27,13 +27,15 @@
         },
         {
             image: {
-                src: '',
+                src: '/assets/icons/monitor.svg',
                 alt: '',
             },
             title: 'GPS Tracking',
             description: 'Keep up with demand - dispatch and track your fleet with real-time GPS, leveraging weather and traffic data to exceed your customers\' expectations.',
         },
     ]
+
+include ../common/divider.pug
 
 mixin benefitContent(image, title, description)
     .benefit-content
@@ -42,22 +44,42 @@ mixin benefitContent(image, title, description)
                 src=image.src
                 alt=image.alt
             )
-        .benefit-content__divider
+        +divider()
         .benefit-content__title= title
         .benefit-content__description= description
 
 section.benefits
     .benefits__item.benefits__item--first
+        .background
+            img(
+                src="/assets/benefit-1-background.png"
+            )
+        .overlay
         .image
+            img(
+                src="/assets/benefit-1.png"
+            )
         +benefitContent(benefits[0].image, benefits[0].title, benefits[0].description)
     .benefits__item.benefits__item--second
         .image
             .background
+            img(
+                src="/assets/benefit-2.png"
+            )
         +benefitContent(benefits[1].image, benefits[1].title, benefits[1].description)
     .benefits__item.benefits__item--third
         .image
+            img(
+                src="/assets/benefit-3.png"
+            )
         .image-chat
+            img(
+                src="/assets/benefit-3-chat.png"
+            )
         +benefitContent(benefits[2].image, benefits[2].title, benefits[2].description)
     .benefits__item.benefits__item--four
         .image
+            img(
+                src="/assets/benefit-4.png"
+            )
         +benefitContent(benefits[3].image, benefits[3].title, benefits[3].description)

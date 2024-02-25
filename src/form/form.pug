@@ -26,6 +26,15 @@ section.form
             )
             .form__call-section
                 +form-cell("Call Us", "+7999999999").form__cell
+                    img(
+                        src="/assets/icons/call.svg"
+                    )
                 +form-cell("Email Us", "example@inbox.ru").form__cell
+                    img(
+                        src="/assets/icons/sms.svg"
+                    )
                 +form-cell("Visit office", "Address").form__cell
+                    img(
+                        src="/assets/icons/map.svg"
+                    )
                 +button().form__button Send message

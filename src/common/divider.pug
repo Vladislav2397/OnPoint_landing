@@ -1,0 +1,4 @@
+mixin divider(top, bottom)
+    .divider(
+        class= top && bottom && `divider--top-${top} divider--bottom-${bottom}` || ''
+    )&attributes(attributes)
