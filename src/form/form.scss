@@ -38,6 +38,11 @@
         padding: 16px 32px;
         border-radius: 10px;
         border: 1px solid #000;
+        background-color: transparent;
+
+        &::placeholder {
+            color: #2D315B80;
+        }
     }
 
     &__call-section {

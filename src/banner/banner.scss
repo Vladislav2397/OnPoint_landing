@@ -24,19 +24,19 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(0%, -27%);
+        transform: translate(-5.6%, -27.6%);
     }
 
     &__content {
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(0, -50%);
+        transform: translate(3.7%, -50%);
     }
 
     &__title {
         font-size: 96px;
-        line-height: 105px;
+        line-height: 101px;
         margin-bottom: 12px;
         font-weight: bold;
         color: $primary;
@@ -48,5 +48,10 @@
         margin-bottom: 40px;
         font-weight: bold;
         color: $primary;
+    }
+
+    &__button {
+        font-size: 20px;
+        line-height: 26px;
     }
 }

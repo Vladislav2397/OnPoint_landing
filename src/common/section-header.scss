@@ -7,12 +7,14 @@
 
     &__title {
         font-size: 36px;
+        line-height: 46px;
         color: $textBase;
         margin-bottom: 20px;
         font-weight: bold;
     }
     &__description {
         font-size: 18px;
+        line-height: 22px;
         color: $textSecondary;
     }
 }

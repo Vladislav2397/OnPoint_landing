@@ -1,0 +1,12 @@
+@mixin font-face($font-family, $font-path, $font-weight: normal, $font-style: normal) {
+    @font-face {
+        font-family: $font-family;
+        src: url('#{$font-path}.woff2') format('woff2'), url('#{$font-path}.woff') format('woff');
+        font-weight: $font-weight;
+        font-style: $font-style;
+    }
+}
+
+@include font-face('Oxygen', '/assets/fonts/Oxygen/Oxygen-Bold', 700);
+@include font-face('Oxygen', '/assets/fonts/Oxygen/Oxygen-Regular', 400);
+@include font-face('Oxygen', '/assets/fonts/Oxygen/Oxygen-Light', 300);
