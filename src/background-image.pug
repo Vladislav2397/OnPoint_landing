@@ -10,4 +10,6 @@ mixin backgroundImage
     .background-image(
         class= attributes.class
     )
-        img&attributes(imgAttributes)
+        img(
+            loading="lazy"
+        )&attributes(imgAttributes)
