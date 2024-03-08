@@ -39,8 +39,8 @@ function convertPugProd() {
     return gulp.src(paths.src.pug)
         .pipe(pug())
         .pipe(replace({
-            prependSrc : '/OnPoint_landing/assets/',
-            keepOrigin : false
+            prependSrc : '/OnPoint_landing',
+            keepOrigin : true
         }))
         .pipe(gulp.dest(paths.dest.html))
         .pipe(browserSync.stream());
