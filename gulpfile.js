@@ -3,7 +3,7 @@ import pug from 'gulp-pug'
 import gulpSass from 'gulp-sass'
 import dartSass from 'sass'
 import browserSync from 'browser-sync'
-import replace from 'gulp-replace-image-src'
+import replace from 'gulp-replace'
 
 const sass = gulpSass(dartSass)
 
@@ -38,10 +38,7 @@ function convertPug() {
 function convertPugProd() {
     return gulp.src(paths.src.pug)
         .pipe(pug())
-        .pipe(replace({
-            prependSrc : '/OnPoint_landing',
-            keepOrigin : true
-        }))
+        .pipe(replace('/assets/', '/OnPoint_landing/assets/'))
         .pipe(gulp.dest(paths.dest.html))
         .pipe(browserSync.stream());
 }
@@ -49,6 +46,14 @@ function convertPugProd() {
 function convertSass() {
     return gulp.src(paths.src.sass)
         .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest(paths.dest.css))
+        .pipe(browserSync.stream());
+}
+
+function convertSassProd() {
+    return gulp.src(paths.src.sass)
+        .pipe(sass().on('error', sass.logError))
+        .pipe(replace('/assets/', '/OnPoint_landing/assets/'))
         .pipe(gulp.dest(paths.dest.css))
         .pipe(browserSync.stream());
 }
@@ -71,7 +76,7 @@ function watchFiles() {
     gulp.watch('dist/*.html').on('change', browserSync.reload);
 }
 
-export const build = gulp.parallel(convertPugProd, convertSass, copyAssets);
+export const build = gulp.parallel(convertPugProd, convertSassProd, copyAssets);
 
 export { convertPug, convertSass, watchFiles };
 export default watchFiles;
