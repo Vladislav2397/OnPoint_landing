@@ -1,0 +1,13 @@
+
+mixin backgroundImage
+    -
+        const imgAttributes = {
+            ...attributes
+        }
+
+        delete imgAttributes.class
+
+    .background-image(
+        class= attributes.class
+    )
+        img&attributes(imgAttributes)

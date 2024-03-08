@@ -1,10 +1,10 @@
 include ../common/button.pug
+include ../background-image.pug
 
-main.banner
-    .banner__image
-        img(
-            src="/assets/banner.png"
-        )
+main.banner#banner
+    +backgroundImage.banner__image(
+        src="/assets/banner.png"
+    )
     .banner__watermark
         img(
             src="/assets/watermark.png"

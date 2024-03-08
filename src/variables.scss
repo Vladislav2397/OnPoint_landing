@@ -1,3 +1,8 @@
 $textBase: #000218;
 $textSecondary: rgba($textBase, 0.5);
 $primary: #2D315B;
+
+// Rem
+@function rem($value) {
+    @return $value / 18px * 1rem;
+}

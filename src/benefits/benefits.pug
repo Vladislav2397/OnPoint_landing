@@ -48,12 +48,11 @@ mixin benefitContent(image, title, description)
         .benefit-content__title= title
         .benefit-content__description= description
 
-section.benefits
+section.benefits#benefits
     .benefits__item.benefits__item--first
-        .background
-            img(
-                src="/assets/benefit-1-background.png"
-            )
+        +backgroundImage(
+            src="/assets/benefit-1-background.png"
+        )
         .overlay
         .image
             img(
@@ -78,8 +77,7 @@ section.benefits
             )
         +benefitContent(benefits[2].image, benefits[2].title, benefits[2].description)
     .benefits__item.benefits__item--four
-        .image
-            img(
-                src="/assets/benefit-4.png"
-            )
+        +backgroundImage.image(
+            src = "/assets/benefit-4.png"
+        )
         +benefitContent(benefits[3].image, benefits[3].title, benefits[3].description)

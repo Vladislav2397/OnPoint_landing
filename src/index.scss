@@ -7,6 +7,10 @@
 @import "common/form-cell.scss";
 @import "common/divider.scss";
 
+html {
+    scroll-behavior: smooth;
+}
+
 html * {
     font: inherit;
 }
@@ -16,6 +20,20 @@ body {
     margin: 0;
     padding: 0;
     min-width: 1200px;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
 }
 
 // Sections
