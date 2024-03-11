@@ -2,14 +2,17 @@ include ../common/button.pug
 include ../background-image.pug
 
 main.banner#banner
-    +backgroundImage.banner__image(
-        src="/assets/banner.png"
+    +backgroundPicture(
+        "/assets/images/banner",
+        "png",
+        "banner"
+    ).banner__image(
         width="1920"
         height="980"
     )
     .banner__watermark
         img(
-            src="/assets/watermark.png"
+            src="/assets/images/watermark.png"
         )
     section.banner__content
         h2.banner__title Advanced&nbsp;Fleet Management Solution

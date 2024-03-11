@@ -53,14 +53,14 @@ mixin benefitContent(image, title, description)
 section.benefits#benefits
     .benefits__item.benefits__item--first
         +backgroundImage(
-            src="/assets/benefit-1-background.png"
+            src="/assets/images/benefit-1-background.png"
             width="1920"
             height="660"
         )
         .overlay
         .image
             img(
-                src="/assets/benefit-1.png"
+                src="/assets/images/benefit-1.png"
                 width="804"
                 height="1020"
             )
@@ -69,7 +69,7 @@ section.benefits#benefits
         .shadow
         .image
             img(
-                src="/assets/benefit-2.png"
+                src="/assets/images/benefit-2.png"
                 width="510"
                 height="420"
             )
@@ -77,20 +77,20 @@ section.benefits#benefits
     .benefits__item.benefits__item--third
         .image
             img(
-                src="/assets/benefit-3.png"
+                src="/assets/images/benefit-3.png"
                 width="569"
                 height="432"
             )
         .image-chat
             img(
-                src="/assets/benefit-3-chat.png"
+                src="/assets/images/benefit-3-chat.png"
                 width="533"
                 height="419"
             )
         +benefitContent(benefits[2].image, benefits[2].title, benefits[2].description)
     .benefits__item.benefits__item--four
         +backgroundImage.image(
-            src = "/assets/benefit-4.png"
+            src = "/assets/images/benefit-4.png"
             width="1920"
             height="681"
         )

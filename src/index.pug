@@ -8,7 +8,20 @@ html(lang="en")
             rel="stylesheet"
             href="./index.css"
         )
-        link(rel="preload" as="image" href="/assets/banner.png")
+        //link(
+        //    rel="preload"
+        //    type="image/png"
+        //    fetchpriority="high"
+        //    as="image"
+        //    href="/assets/banner.png"
+        //)
+        link(
+            rel="preload"
+            type="image/webp"
+            fetchpriority="high"
+            as="image"
+            href="/assets/images/banner.webp"
+        )
     body
         include header/header.pug
         include banner/banner.pug

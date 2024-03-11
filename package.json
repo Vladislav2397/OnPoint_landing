@@ -7,6 +7,7 @@
     "scripts": {
         "start": "gulp",
         "build": "gulp build",
+        "webp": "node ./bin/webp-converter.js",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "keywords": [],
@@ -20,5 +21,13 @@
         "gulp-replace-image-src": "^1.0.1",
         "gulp-sass": "~5.0.0",
         "sass": "^1.71.1"
+    },
+    "dependencies": {
+        "chokidar": "^3.6.0",
+        "imagemin": "^8.0.1",
+        "imagemin-mozjpeg": "^10.0.0",
+        "imagemin-pngquant": "^9.0.2",
+        "ncp": "^2.0.0",
+        "sharp": "^0.33.2"
     }
 }

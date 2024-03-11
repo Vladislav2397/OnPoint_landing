@@ -13,3 +13,25 @@ mixin backgroundImage
         img(
             loading="lazy"
         )&attributes(imgAttributes)
+
+
+mixin backgroundPicture(path, ext, alt)
+    -
+        const imgAttributes = {
+            ...attributes
+        }
+
+        delete imgAttributes.class
+
+    .background-image(
+        class= attributes.class
+    )
+        picture
+            source(
+                src=path + '.webp'
+            )&attributes(imgAttributes)
+            img(
+                src=path + '.' + ext
+                alt=alt
+                loading="lazy"
+            )&attributes(imgAttributes)
