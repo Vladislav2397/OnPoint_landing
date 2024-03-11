@@ -52,50 +52,52 @@ mixin benefitContent(image, title, description)
 
 section.benefits#benefits
     .benefits__item.benefits__item--first
-        +backgroundImage(
+        +backgroundPicture(
             src="/assets/images/benefit-1-background.png"
             alt="benefit background"
             width="1920"
             height="660"
         )
         .overlay
-        .image
-            img(
-                src="/assets/images/benefit-1.png"
-                alt="Screens of mobile app"
-                width="804"
-                height="1020"
-            )
+        +picture({
+            path: "/assets/images/benefit-1",
+            ext: "png",
+            alt: "Screens of mobile app",
+            width: "804",
+            height: "1020",
+        }).image
         +benefitContent(benefits[0].image, benefits[0].title, benefits[0].description)
     .benefits__item.benefits__item--second
         .shadow
-        .image
-            img(
-                src="/assets/images/benefit-2.png"
-                alt="Truck"
-                width="510"
-                height="420"
-            )
+        +picture({
+            path: "/assets/images/benefit-2",
+            ext: "png",
+            alt: "Truck",
+            width: "510",
+            height: "420",
+        }).image
         +benefitContent(benefits[1].image, benefits[1].title, benefits[1].description)
     .benefits__item.benefits__item--third
-        .image
-            img(
-                src="/assets/images/benefit-3.png"
-                alt="Truck"
-                width="569"
-                height="432"
-            )
-        .image-chat
-            img(
-                src="/assets/images/benefit-3-chat.png"
-                alt="App chat"
-                width="533"
-                height="419"
-            )
+        +picture({
+            path: "/assets/images/benefit-3",
+            ext: "png",
+            alt: "Truck",
+            width: "569",
+            height: "432",
+        }).image
+        +picture({
+            path: "/assets/images/benefit-3-chat",
+            ext: "png",
+            alt: "App chat",
+            width: "533",
+            height: "419",
+        }).image-chat
         +benefitContent(benefits[2].image, benefits[2].title, benefits[2].description)
     .benefits__item.benefits__item--four
-        +backgroundImage.image(
-            src="/assets/images/benefit-4.png"
+        +backgroundPicture(
+            "/assets/images/benefit-4",
+            "png",
+        ).image(
             alt="Benefit background"
             width="1920"
             height="681"

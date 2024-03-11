@@ -28,10 +28,35 @@ mixin backgroundPicture(path, ext, alt)
     )
         picture
             source(
-                src=path + '.webp'
+                srcset=path + '.webp'
             )&attributes(imgAttributes)
             img(
                 src=path + '.' + ext
                 alt=alt
                 loading="lazy"
             )&attributes(imgAttributes)
+
+mixin picture(options)
+    -
+        const { path, ext, alt, width, height } = options || {}
+    picture.picture(
+        class= attributes.class
+    )
+        source(
+            srcset= path + '.webp'
+            width= width
+            height= height
+            type="image/webp"
+        )
+        source(
+            srcset= path + '.' + ext
+            width= width
+            height= height
+            type="image/" + ext
+        )
+        img(
+            src=path + '.' + ext
+            alt= alt
+            width= width
+            height= height
+        )
