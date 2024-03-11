@@ -3,7 +3,7 @@
         {
             image: {
                 src: '/assets/icons/mobile.svg',
-                alt: '',
+                alt: 'mobile icon',
             },
             title: 'Driver App on any sceen',
             description: 'Right measurement of the fleet help you set up precise business. Our "Driver App" provides a most\n' +
@@ -12,7 +12,7 @@
         {
             image: {
                 src: '/assets/icons/monitor.svg',
-                alt: '',
+                alt: 'monitor icon',
             },
             title: 'Flexible Dispatch Board',
             description: 'Dispatch Board is the go-to dispatching software - created with carrier needs in mind. Dispatch Board will streamline day-to-day operations maximizing your time so you can focus on better loads and bigger profit.',
@@ -20,7 +20,7 @@
         {
             image: {
                 src: '/assets/icons/mobile.svg',
-                alt: '',
+                alt: 'phone icon',
             },
             title: 'Chat on drivers and dispatchers',
             description: 'We understand the importance of approaching each work integrally and believe in the power of simple and easy communication.',
@@ -28,7 +28,7 @@
         {
             image: {
                 src: '/assets/icons/monitor.svg',
-                alt: '',
+                alt: 'monitor icon',
             },
             title: 'GPS Tracking',
             description: 'Keep up with demand - dispatch and track your fleet with real-time GPS, leveraging weather and traffic data to exceed your customers\' expectations.',
@@ -54,6 +54,7 @@ section.benefits#benefits
     .benefits__item.benefits__item--first
         +backgroundImage(
             src="/assets/images/benefit-1-background.png"
+            alt="benefit background"
             width="1920"
             height="660"
         )
@@ -61,6 +62,7 @@ section.benefits#benefits
         .image
             img(
                 src="/assets/images/benefit-1.png"
+                alt="Screens of mobile app"
                 width="804"
                 height="1020"
             )
@@ -70,6 +72,7 @@ section.benefits#benefits
         .image
             img(
                 src="/assets/images/benefit-2.png"
+                alt="Truck"
                 width="510"
                 height="420"
             )
@@ -78,19 +81,22 @@ section.benefits#benefits
         .image
             img(
                 src="/assets/images/benefit-3.png"
+                alt="Truck"
                 width="569"
                 height="432"
             )
         .image-chat
             img(
                 src="/assets/images/benefit-3-chat.png"
+                alt="App chat"
                 width="533"
                 height="419"
             )
         +benefitContent(benefits[2].image, benefits[2].title, benefits[2].description)
     .benefits__item.benefits__item--four
         +backgroundImage.image(
-            src = "/assets/images/benefit-4.png"
+            src="/assets/images/benefit-4.png"
+            alt="Benefit background"
             width="1920"
             height="681"
         )
