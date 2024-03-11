@@ -36,6 +36,34 @@ mixin backgroundPicture(path, ext, alt)
                 loading="lazy"
             )&attributes(imgAttributes)
 
+mixin background(options)
+    -
+        const { path, ext, alt, width, height, loading = 'lazy' } = options || {}
+
+    .background-image(
+        class= attributes.class
+    )
+        picture
+            source(
+                srcset=path + '.webp'
+                width= width
+                height= height
+                type="image/webp"
+            )
+            source(
+                srcset=path + '.' + ext
+                width= width
+                height= height
+                type="image/" + ext
+            )
+            img(
+                src=path + '.' + ext
+                alt=alt
+                width= width
+                height= height
+                loading=loading
+            )
+
 mixin picture(options)
     -
         const { path, ext, alt, width, height } = options || {}
